@@ -6,18 +6,20 @@ namespace conversioneDecimaleBinario
     {
         static void Main(string[] args)
         {
-            int num, resto;
-            Console.Write("inserisci un numero da convertitre: ");
+            int num, resto,bas;
+            Console.Write("inserisci un numero da convertitre: ");            
             num = int.Parse(Console.ReadLine());
+            Console.Write("inserisci la base da cui convertire: ");
+            bas = int.Parse(Console.ReadLine());
             string binario = "";
             while (num > 0)
             {
-                resto = num % 2;
-                num /= 2;
+                resto = num % bas;
+                num /= bas;
                 binario = Convert.ToString(resto) + binario;
 
             }
-            Console.WriteLine($"il numero in binario è {binario}");
+            Console.WriteLine($"il numero convertito è {binario}");
             Console.ReadLine();
         }
     }
