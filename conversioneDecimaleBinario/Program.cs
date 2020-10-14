@@ -9,7 +9,7 @@ namespace conversioneDecimaleBinario
             int num, resto,bas;
             Console.Write("inserisci un numero da convertitre: ");            
             num = int.Parse(Console.ReadLine());
-            Console.Write("inserisci la base da cui convertire: ");
+            Console.Write("inserisci la base: ");
             bas = int.Parse(Console.ReadLine());
             string binario = "";
             while (num > 0)
